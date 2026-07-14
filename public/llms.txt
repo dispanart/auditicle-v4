@@ -1,0 +1,52 @@
+# Auditicle
+
+Auditicle is an evidence-based article intelligence application for Technical SEO, GEO readiness, AEO readiness, RAG retrieval readiness, and LLMO / AI citation readiness.
+
+## Primary product pages
+- https://auditicle.site/
+- https://auditicle.site/features.html
+- https://auditicle.site/use-cases.html
+- https://auditicle.site/methodology.html
+- https://auditicle.site/docs.html
+
+## Focused article audit guides
+- https://auditicle.site/free-article-seo-audit-tool
+- https://auditicle.site/article-seo-checker
+- https://auditicle.site/technical-seo-article-audit
+- https://auditicle.site/geo-readiness-audit
+- https://auditicle.site/aeo-readiness-checker
+- https://auditicle.site/rag-retrieval-readiness
+- https://auditicle.site/ai-citation-readiness-checker
+- https://auditicle.site/rendered-html-seo-audit
+
+## Original research
+- https://auditicle.site/article-readiness-benchmark-2026
+- https://auditicle.site/data/benchmark-methodology-2026.md
+- https://auditicle.site/data/benchmark-data-dictionary.csv
+- https://auditicle.site/data/article-readiness-benchmark-2026.json
+
+The 2026 benchmark page currently publishes the protocol and collection status only. It does not publish fabricated percentages, medians, or platform conclusions before the 1,000-article sample is complete and quality reviewed.
+
+## Trust and system pages
+- https://auditicle.site/ai-transparency.html
+- https://auditicle.site/data-sources.html
+- https://auditicle.site/crawler-information.html
+- https://auditicle.site/system-status.html
+- https://auditicle.site/privacy.html
+- https://auditicle.site/disclaimer.html
+- https://auditicle.site/accessibility.html
+
+## Organization pages
+- https://auditicle.site/about.html
+- https://auditicle.site/contact.html
+- https://auditicle.site/faq.html
+- https://auditicle.site/terms.html
+- https://auditicle.site/changelog.html
+
+## Evidence behavior
+Auditicle checks robots.txt before primary server-HTML collection. Auto and Rendered Browser modes can use Cloudflare Browser Rendering, with a server-HTML fallback when rendering is unavailable. Reports label evidence origin, coverage, limitations, and final, provisional, or withheld score status.
+
+The core findings and five readiness scores are deterministic. Optional external AI providers receive a bounded evidence payload to explain findings, organize priorities, or translate a completed report. Missing provider keys are skipped. When all report providers are unavailable, Auditicle can assemble a deterministic narrative from the existing scorecards and finding ledger. Translation still requires a configured external provider.
+
+## Important limitations
+Auditicle does not confirm index status, rankings, traffic, backlinks, factual accuracy, originality, rich-result display, AI Overview inclusion, private RAG ingestion, or citation by an AI system. GEO, AEO, RAG, and LLMO are diagnostic readiness views based on observable public evidence, not outcome guarantees.

@@ -1,0 +1,36 @@
+{
+  "name": "auditicle-seo-forensics",
+  "private": true,
+  "version": "4.8.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "pages:generate": "node scripts/generate-static-pages.mjs",
+    "validate:public": "node scripts/validate-public-pages.mjs",
+    "security:check": "node scripts/check-public-secrets.mjs",
+    "typecheck": "tsc -b",
+    "build": "npm run pages:generate && npm run security:check && npm run validate:public && npm run typecheck && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "worker:dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "dry-run": "npm run build && wrangler deploy --dry-run",
+    "check": "npm run test && npm run build && wrangler deploy --dry-run",
+    "benchmark:aggregate": "node scripts/aggregate-benchmark.mjs"
+  },
+  "dependencies": {
+    "@cloudflare/puppeteer": "^1.1.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260712.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^3.2.6",
+    "wrangler": "^4.110.0"
+  }
+}

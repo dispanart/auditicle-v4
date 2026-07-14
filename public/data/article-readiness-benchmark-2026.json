@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "study": "Auditicle Article Readiness Benchmark 2026",
+  "targetSample": 1000,
+  "sampleSize": 0,
+  "status": "data-collection",
+  "resultsPublished": false,
+  "generatedAt": "2026-07-14T02:22:46.018Z",
+  "methodologyUrl": "https://auditicle.site/article-readiness-benchmark-2026",
+  "safeguards": [
+    "No page URLs, hostnames, personal data, raw HTML, or article text are published in this aggregate file.",
+    "Results remain unpublished until the sample is complete, duplicates are removed, and quality checks are documented.",
+    "Platform comparisons require an adequate sample and are descriptive, not causal."
+  ],
+  "metrics": null,
+  "platforms": {}
+}

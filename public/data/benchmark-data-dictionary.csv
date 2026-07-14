@@ -1,0 +1,12 @@
+field,type,allowed_values,description,published
+id,string,non-identifying token,Stable de-identified record identifier,no
+platform,enum,WordPress|Next.js|Webflow|Custom CMS|Other|Unknown,Platform inferred from observable public evidence,aggregate only
+visibleAuthor,boolean,true|false,Visible author attribution detected,aggregate only
+dateModified,boolean,true|false,dateModified or equivalent update signal detected,aggregate only
+thinServerHtml,boolean,true|false,Server HTML met the preregistered thin-shell rule,aggregate only
+citationLinks,integer,0-1000,Count of qualifying source or reference destinations,aggregate only
+scores.technical,integer,0-100,Deterministic Technical SEO readiness score,aggregate only
+scores.geo,integer,0-100,Deterministic GEO readiness score,aggregate only
+scores.aeo,integer,0-100,Deterministic AEO readiness score,aggregate only
+scores.rag,integer,0-100,Deterministic RAG retrieval readiness score,aggregate only
+scores.llmo,integer,0-100,Deterministic LLMO or AI citation readiness score,aggregate only

@@ -1,0 +1,92 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "auditicle-v4",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-07-11",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "browser": {
+    "binding": "BROWSER"
+  },
+  "workers_dev": true,
+  "keep_vars": true,
+  "assets": {
+    "directory": "./dist/",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": [
+      "/api/*",
+      "/",
+      "/*.html",
+      "/robots.txt",
+      "/free-article-seo-audit-tool*",
+      "/article-seo-checker*",
+      "/technical-seo-article-audit*",
+      "/geo-readiness-audit*",
+      "/aeo-readiness-checker*",
+      "/rag-retrieval-readiness*",
+      "/ai-citation-readiness-checker*",
+      "/rendered-html-seo-audit*",
+      "/article-readiness-benchmark-2026*"
+    ],
+    "html_handling": "drop-trailing-slash"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  },
+  "vars": {
+    "SITE_URL": "https://auditicle.site",
+    "PUBLIC_CONTACT_EMAIL": "hello@auditicle.site",
+    "TURNSTILE_REQUIRED": "true",
+    "DAILY_AUDIT_LIMIT": "5",
+    "DONATION_URL": "https://sociabuzz.com/dispa/donate",
+    "SESSION_TTL_SECONDS": "1800",
+    "MAX_HTML_BYTES": "1000000",
+    "MAX_LINKS": "5",
+    "LINK_BATCH_SIZE": "5",
+    "MAX_LINK_BATCHES": "1",
+    "AI_REPORTS_PER_SESSION": "1",
+    "TRANSLATIONS_PER_SESSION": "1",
+    "SITEMAP_URL_PARSE_LIMIT": "10000",
+    "AI_REPORT_PROVIDER_ORDER": "gemini,groq,openrouter",
+    "TRANSLATION_PROVIDER_ORDER": "groq,gemini,openrouter",
+    "GEMINI_MODEL": "gemini-3.1-flash-lite",
+    "GROQ_REPORT_MODEL": "openai/gpt-oss-120b",
+    "GROQ_TRANSLATION_MODEL": "openai/gpt-oss-20b",
+    "OPENROUTER_REPORT_MODEL": "openrouter/free",
+    "OPENROUTER_TRANSLATION_MODEL": "openrouter/free",
+    "RENDERED_BROWSER_ENABLED": "true",
+    "RENDER_TIMEOUT_MS": "30000",
+    "GLOBAL_DAILY_AUDIT_LIMIT": "100",
+    "RENDERED_BROWSER_DAILY_LIMIT": "20",
+    "AI_DAILY_REQUEST_LIMIT": "30",
+    "GEMINI_DAILY_REQUEST_LIMIT": "15",
+    "GROQ_DAILY_REQUEST_LIMIT": "20",
+    "OPENROUTER_DAILY_REQUEST_LIMIT": "10",
+    "PAGESPEED_CACHE_TTL_SECONDS": "43200",
+    "ROBOTS_CACHE_TTL_SECONDS": "3600",
+    "SITEMAP_CACHE_TTL_SECONDS": "21600"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "QUOTA_COORDINATOR",
+        "class_name": "AuditicleQuotaCoordinator"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "AuditicleQuotaCoordinator"
+      ]
+    }
+  ],
+  "limits": {
+    "cpu_ms": 10,
+    "subrequests": 50
+  }
+}
