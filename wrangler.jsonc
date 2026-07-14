@@ -84,9 +84,5 @@
         "AuditicleQuotaCoordinator"
       ]
     }
-  ],
-  "limits": {
-    "cpu_ms": 10,
-    "subrequests": 50
-  }
+  ]
 }
